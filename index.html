@@ -4,36 +4,51 @@
   <meta charset="UTF-8">
   <title>Analizador de Sentimientos</title>
 
-  <!-- Tailwind para estilos -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
 
   <div class="bg-gray-800 p-10 rounded-xl w-[600px] shadow-lg">
-    
+
     <h1 class="text-3xl font-bold mb-6 text-center">
       Analizador de Sentimientos
     </h1>
 
-    <!-- Input -->
     <textarea id="texto"
       class="w-full p-4 rounded text-black text-lg h-32"
       placeholder="Escribe una opinión..."></textarea>
 
-    <!-- Botón -->
-    <button onclick="analizar()"
-    class="mt-6 w-full bg-blue-500 hover:bg-blue-600 p-4 rounded text-lg">
-    Analizar
+    <div class="mt-4 grid grid-cols-2 gap-3">
+      <div>
+        <label class="text-sm">Learning Rate</label>
+        <input id="learningRate" type="number" value="0.01" step="0.001"
+          class="w-full p-2 rounded text-black">
+      </div>
+
+      <div>
+        <label class="text-sm">Epochs</label>
+        <input id="epochs" type="number" value="50"
+          class="w-full p-2 rounded text-black">
+      </div>
+    </div>
+
+    <button onclick="entrenarModelo()"
+      class="mt-4 w-full bg-green-500 hover:bg-green-600 p-3 rounded text-lg">
+      Reentrenar Modelo
     </button>
 
-    <!-- Resultado -->
+    <button onclick="analizar()"
+      class="mt-6 w-full bg-blue-500 hover:bg-blue-600 p-4 rounded text-lg">
+      Analizar
+    </button>
+
     <p id="resultado" class="mt-4 text-center text-lg"></p>
+    <p id="entrenamiento" class="mt-2 text-sm text-gray-400 text-center"></p>
 
   </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="script.js"></script>
 
 </body>
