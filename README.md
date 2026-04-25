@@ -36,7 +36,7 @@ El proyecto demuestra cómo una red neuronal puede aprender patrones a partir de
 ## Evidencia
 
 ## Interfaz
-![Interfaz](./interzar.png)
+![Interfaz](./interfaz.png)
 
 ## Pruebas 
 ![Prueba1](./prueba1.png)
