@@ -33,4 +33,5 @@ Se utilizó un conjunto de datos en formato JSON con frases técnicas clasificad
 ## Conclusión
 El proyecto demuestra cómo una red neuronal puede aprender patrones a partir de datos y realizar predicciones probabilísticas.
 
-## Shirly Hernandez
+## Estudiante
+Shirly Hernandez
