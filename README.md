@@ -25,24 +25,34 @@ Se utilizó un conjunto de datos en formato JSON con frases técnicas clasificad
 - Positivo (1)
 - Negativo (0)
 
+## Hiperparámetros
+Se implementó la modificación dinámica de los hiperparámetros:
+- Learning Rate
+- Epochs
+Esto permite observar cómo cambia el comportamiento del modelo en tiempo real.
+
+## Entrenamiento del modelo
+Se visualiza el proceso de entrenamiento mediante el valor de la función de pérdida (Loss) en cada época, permitiendo analizar la convergencia del modelo.
+
 ## Limitaciones
 - Dataset limitado
 - No comprende contexto complejo (ej. sarcasmo)
 - Modelo simple
 
 ## Conclusión
-El proyecto demuestra cómo una red neuronal puede aprender patrones a partir de datos y realizar predicciones probabilísticas.
+El proyecto demuestra cómo una red neuronal puede aprender patrones a partir de datos y realizar predicciones probabilísticas.  
+Además, se evidenció cómo los hiperparámetros afectan directamente la precisión y la incertidumbre del modelo.
 
 ## Evidencia
 
-## Interfaz
+### Interfaz
 ![Interfaz](./interfaz.png)
 
-## Pruebas 
+### Prueba con hiperparámetros
 ![Prueba1](./prueba1.png)
 
+### Resultado del modelo
 ![Prueba2](./prueba2.png)
-
 
 ## Estudiante
 Shirly Hernandez
