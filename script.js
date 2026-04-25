@@ -10,6 +10,8 @@ function limpiarTexto(texto) {
 }
 
 async function entrenarModelo() {
+  const lr = parseFloat(document.getElementById("learningRate").value);
+  const epochs = parseInt(document.getElementById("epochs").value);
   const response = await fetch("dataset.json");
   const data = await response.json();
 
@@ -48,14 +50,20 @@ async function entrenarModelo() {
   model.add(tf.layers.dense({ units: 1, activation: "sigmoid" }));
 
   model.compile({
-    optimizer: tf.train.adam(0.01),
+    optimizer: tf.train.adam(lr),
     loss: "binaryCrossentropy",
     metrics: ["accuracy"]
   });
 
   await model.fit(xs, ys, {
-    epochs: 50
-  });
+  epochs: epochs,
+  callbacks: {
+    onEpochEnd: (epoch, logs) => {
+      document.getElementById("entrenamiento").innerHTML =
+        `Epoch: ${epoch + 1} | Loss: ${logs.loss.toFixed(4)}`;
+    }
+  }
+});
 
   console.log("Modelo entrenado correctamente");
 }
