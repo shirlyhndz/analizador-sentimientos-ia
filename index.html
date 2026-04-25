@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Analizador de Sentimientos</title>
+
+  <!-- Tailwind para estilos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+
+  <div class="bg-gray-800 p-10 rounded-xl w-[600px] shadow-lg">
+    
+    <h1 class="text-3xl font-bold mb-6 text-center">
+      Analizador de Sentimientos
+    </h1>
+
+    <!-- Input -->
+    <textarea id="texto"
+      class="w-full p-4 rounded text-black text-lg h-32"
+      placeholder="Escribe una opinión..."></textarea>
+
+    <!-- Botón -->
+    <button onclick="analizar()"
+    class="mt-6 w-full bg-blue-500 hover:bg-blue-600 p-4 rounded text-lg">
+    Analizar
+    </button>
+
+    <!-- Resultado -->
+    <p id="resultado" class="mt-4 text-center text-lg"></p>
+
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
